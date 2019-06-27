@@ -6,8 +6,8 @@ pipeline{
     }
 
     parameters {
-        string(name: 'BUILD_APPROVER_EMAIL', defaultValue: 'homerrodriguezb@gmail.com', description: 'Build Approver Email')
-        string(name: 'BUILD_APPROVER_NAME', defaultValue: 'Homer Rodriguez', description: 'Build Approver Name')
+        string(name: 'BUILD_APPROVER_EMAIL', defaultValue: 'escuetamichael@gmail.com', description: 'Build Approver Email')
+        string(name: 'BUILD_APPROVER_NAME', defaultValue: 'Michael Escueta', description: 'Build Approver Name')
     }
     options {
         timestamps()
