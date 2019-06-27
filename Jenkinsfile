@@ -31,7 +31,9 @@ pipeline{
             steps {
                 withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', credentialsId: 'AWS_STAGING_CREDENTIALS']]) {
                     s3Upload bucket: 'group2.ibm-kapamilya-devops.com', file: "kapamilya-chat", workingDir: 'dist', acl: 'PublicRead'
-                    sh '/usr/bin/aws cloudfront create-invalidation --distribution-id E2HT4Z9DDRUMSD --paths /*'
+                    sh '''
+                        /usr/bin/aws cloudfront create-invalidation --distribution-id E1KAFIBVBSUAER --paths '/*'
+                    '''
                 }
             }
         }
